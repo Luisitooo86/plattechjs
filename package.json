@@ -1,8 +1,7 @@
 {
-  "name": "portfolio-site",
+  "name": "Luis Adrian Balita Portfolio",
   "version": "1.0.0",
   "main": "server.js",
-  "license": "MIT",
   "scripts": {
     "start": "node server.js"
   },
