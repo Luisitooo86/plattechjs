@@ -20,7 +20,7 @@ body {
 
 .left img {
   width: 100%;
-  max-width: 650px;
+  max-width: 500px;
   object-fit: contain;
 }
 
@@ -75,3 +75,4 @@ h1 {
     width: 55%;
   }
 }
+
