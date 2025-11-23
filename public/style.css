@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #0f0f0f;
+  background: #0f0f0f; /* main background */
   color: white;
   font-family: Arial, sans-serif;
   display: flex;
@@ -11,7 +11,7 @@ body {
 
 .left {
   flex: 1;
-  background: #111;
+  background: #0f0f0f; /* same as body */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,16 +20,20 @@ body {
 
 .left img {
   width: 100%;
-  max-width: 600px;
+  max-width: 650px; 
   object-fit: contain;
+  display: block;
 }
 
 .right {
   flex: 1;
+  background: #0f0f0f; /* same as body */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* vertical centering */
+  align-items: flex-start; /* left-align content */
   padding-right: 120px;
+  text-align: left; /* ensure text stays left-aligned */
 }
 
 .hello {
@@ -69,11 +73,12 @@ h1 {
   .right {
     padding-right: 0;
     text-align: center;
+    align-items: center; /* center content on small screens */
     margin-top: 20px;
   }
   .left img {
     width: 55%;
+    height: auto;
   }
 }
-
 
