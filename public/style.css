@@ -10,7 +10,7 @@ body {
 }
 
 .left {
-  flex: 1;
+  /* remove flex:1 to shrink-wrap */
   background: #111;
   display: flex;
   align-items: center;
@@ -22,10 +22,11 @@ body {
   width: 100%;
   max-width: 650px;
   object-fit: contain;
+  display: block; /* prevents extra space under image */
 }
 
 .right {
-  flex: 1;
+  flex: 1; /* this stays flexible to fill the remaining space */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,4 +76,3 @@ h1 {
     width: 55%;
   }
 }
-
