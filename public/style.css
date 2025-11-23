@@ -10,23 +10,24 @@ body {
 }
 
 .left {
-  /* remove flex:1 to shrink-wrap */
   background: #111;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  width: auto;         /* width determined by image */
+  height: 100%;        /* full height of body */
 }
 
 .left img {
-  width: 100%;
-  max-width: 650px;
-  object-fit: contain;
-  display: block; /* prevents extra space under image */
+  width: auto;          /* maintain original width */
+  height: 100%;         /* fill the div vertically */
+  object-fit: contain;  /* preserve aspect ratio */
+  display: block;
 }
 
 .right {
-  flex: 1; /* this stays flexible to fill the remaining space */
+  flex: 1; /* fills remaining horizontal space */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,12 +68,17 @@ h1 {
     height: auto;
     padding: 20px;
   }
-  .right {
-    padding-right: 0;
-    text-align: center;
-    margin-top: 20px;
+.right {
+  flex: 1; /* fills remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center the text block */
+  align-items: flex-start; /* keep text left-aligned */
+  padding-right: 120px;
+  text-align: left;        /* ensure text inside stays left-aligned */
+}
   }
   .left img {
-    width: 55%;
+    width: auto;
+    height: 55%;
   }
-}
